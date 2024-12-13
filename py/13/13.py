@@ -14,12 +14,14 @@ def solve1(a, b, c):
 
     D1 = (c1 * b2 - c2 * b1)
     D2 = (c1 * a2 - c2 * a1)
-    D = (a1*b2 - a2*b1)
-    if D1 % D == 0 and D2 % D == 0:
-        x = D1 /D
+    D = (a1 * b2 - a2 * b1)
+    if D != 0 and D1 % D == 0 and D2 % D == 0:
+        x = D1 / D
         y = -D2 / D
-        return x, y
+        if x >= 0 and y >= 0:
+            return int(x), int(y)
     return None, None
+
 
 SHIFT = 10000000000000
 
